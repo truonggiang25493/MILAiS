@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div id="login" class="col-md-6">
+            <section id="loginForm">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="modal-title">Already a member? Sign in:</div>
+                }
+            </section>
+
+        </div>
+        <div id="register">
+
+        </div>
+    </div>
+
+</div>
+
